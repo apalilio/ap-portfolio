@@ -1,0 +1,360 @@
+/* #BASE CSS (Initital Setup)
+---------------------------------
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HEADINGS
+            #PARAGRAPHS
+            #LINKS
+            #HELPERS
+        #MEDIA
+            #IMAGES
+        #COMPONENTS
+            #BUTTONS
+    #BASE LAYOUT
+        #SIMPLE RESET
+        #MEDIAQUERIES
+        #CONTAINER
+        #GRID SYSTEM
+            #CLEARFIX
+    #BASE SITE
+        #SITE STR UCTURE
+            #HEADER
+                # site-id (LOGO)
+            #FOOTER 
+            #SECTIONS
+            #SUB PAGES
+                #ARTICLES
+        #SITE NAVIGATION
+            #TOGGLE-NAV (Default for Small Screens)
+--------------------------------- */
+
+/* GLOBGAL RESET */
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* GLOBAL COLORS*/
+a {
+    color: rgb(23, 62, 24);
+}
+
+a:hover {
+    color: rgb(129, 159, 139);
+}
+
+/* GLOBAL TYPOGRAPHY*/
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 88.75%;
+    /*14px */
+    line-height: 1.4;
+}
+
+/* Header */
+header {
+    background-color: rgba(44, 110, 72, 0.499);
+    color: rgba(250, 247, 247, 0.8);
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+header a {
+    color: rgba(243, 243, 243, 1);
+    text-decoration: none;
+}
+
+header a:hover {
+    color: rgb(175, 229, 184);
+}
+
+/* CUSTOM STYLING */
+.page-home .hero {
+    background-image: url('../img/totoro.gif');
+    background-size: cover;
+    background-position: center;
+    padding: 22vh 1em;
+}
+
+/* SITE ID*/
+.site-id h1 {
+    margin: 0;
+}
+
+/* SITE NAV */
+.site-nav ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-nav a {
+    display: block;
+    padding: 1em;
+}
+
+/* MAIN */
+main {
+    background: rgba(0, 0, 0, .05)
+}
+
+/* FOOTER */
+footer {
+    border-top: 1px solid rgb(0, 0, 0, .05);
+    padding: 1em;
+}
+
+
+/* SOCIAL NAV */
+.social-nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+.social-nav a {
+    display: block;
+    padding: 1em;
+}
+
+/* LAYOUT */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 3em 1em;
+}
+
+/*SIDEBAR/ASIDE */
+aside {
+    padding: 2em 0;
+}
+
+@media (min-width: 768px) {
+    .two-col-sidebar {
+        display: grid;
+        grid-template-columns: 20em auto;
+    }
+
+    .two-col-sidebar aside {
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        margin: 0 3em 2em 0;
+        padding: .3em 2em 0 0;
+    }
+}
+
+/* HERO SECTION */
+.hero {
+    background-color: rgba(4, 39, 16, 0.56);
+    color: rgba(250, 247, 247, 0.8);
+    text-align: center;
+    padding: 6em 1em;
+}
+
+.hero h2 {
+    font-size: 6em;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+.hero p {
+    max-width: 30em;
+    margin: 1em auto;
+}
+
+
+/* COURSES SECTION */
+.courses {
+    padding: 6em 1em;
+    display: grid;
+    justify-content: center;
+}
+
+.courses ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.courses h3 {
+    text-align: center;
+}
+
+/* STYLING FOR SUB PAGES */
+.page-sub .hero {
+    background-color: rgba(71, 115, 93, 0.486);
+    color: rgba(250, 247, 247, 0.8);
+}
+
+/* COURSE WORK SECTION */
+.coursework {
+    padding: 3em 1em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project h3 {
+    justify-content: center;
+}
+
+.project {
+    margin: 2em;
+}
+
+/* CODE BLOCKS */
+
+pre code {
+    width: 100%;
+    display: block;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 1em 3em;
+    margin-bottom: 1em;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.markup-box {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 1em 3em;
+    margin-bottom: 1em;
+}
+
+/* DEFINITION LISTS */
+dt {
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+dd {
+    margin: 0;
+}
+
+/* NOTES PAGE SCROLLBAR FIX FOR GISTS */
+@media (min-width: 768px) and (max-width: 910px) {
+    .gist {
+        max-width: 450px;
+    }
+}
+
+/* CARDS */
+
+.course .course {
+    display: flex;
+    justify-content: center;
+}
+
+/* command+  / comments comment tag */
+
+/* PROJECTS */
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.projects {
+    padding: 3em 2em 9em 2em;
+}
+
+.projects-thumbgrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.projects-thumbgrid li {
+    margin: 0 0 1% 0;
+    padding: 0;
+    width: 49%;
+}
+
+.projects-thumbgrid a {
+    display: block;
+}
+
+.projects-thumbgrid img {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .projects-thumbgrid li {
+        width: 24%;
+    }
+}
+
+/* CARDS */
+
+.courses .cards {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 3em;
+    flex-wrap: wrap;
+    padding: 3em 0;
+    font-size: .875em;
+    line-height: 1.1;
+}
+
+.courses .cards li {
+    max-width: 100%;
+}
+
+.courses .cards a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    padding: 3em 2em;
+    /* margin: 1em */
+    text-decoration: none;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .1);
+
+}
+
+.courses .class a:hover {
+    background-color: rgba (51, 102, 102, 1);
+    color: white;
+}
+
+.courses .cards span {
+    display: block;
+    font-size: 2em;
+}
+
+
+
+
+
+/* FOR DEV PURPOSES */
+/* body * {
+    background-color: rgba(0,0,0,.05) !important;
+    border: 1px solid rgba(0,0,0,.1) !important;
+    color: rgba(0,0,0,.5) !important;
+} */
