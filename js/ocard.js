@@ -30,3 +30,8 @@ Array.from(cards).forEach((card, index) => {
     })})`;
   });
 });
+
+// REFRESH BROWSER ON RESIZE
+window.addEventListener('resize', function(event) {
+  location.reload();
+});
