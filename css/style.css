@@ -274,9 +274,9 @@ section {
 }
 
 /* CASE STUDY LAYOUT */
-/* GLOBAL RESET */
+
   /* Set up the grid container */
-  .project-grid {
+.project-grid {
     display: grid;
     grid-template-columns: 1fr; /* Default: 1 column (full-width) */
     gap: 20px; /* Space between grid items */
@@ -297,10 +297,13 @@ section {
 }
   /* Image inside card */
 .project-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    object-position: center; 
+    object-fit: cover;
+    object-position: center;
 }
 
   /* Overlay for project information */
@@ -321,6 +324,14 @@ section {
 .project-card.full-width {
     grid-column: span 1; 
     grid-row: span 1; 
+    width: 100%;
+    position: relative;
+    
+    padding-top: 66.66%; /* 3:2 aspect ratio (height/width = 2/3 -> 2/3 * 100 = 66.66%) */
+    height: 0; /* Set height to 0 so it is determined by padding-top */
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
   /* Layout for the 2x2 grid items */
