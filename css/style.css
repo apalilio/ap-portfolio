@@ -37,10 +37,9 @@ body {
     box-sizing: border-box;
 }
 
-
 /* GLOBAL COLORS*/
 a {
-    color: rgba(73, 167, 255, 0.734);
+    color: rgba(53, 121, 184, 0.734);
 }
 
 a:hover {
@@ -54,26 +53,28 @@ body {
     line-height: 1.4;
 }
 
-/* Header */
+/* SITE NAV HEADER */
 header {
-    background-color: rgba(57, 101, 156, 0.864);
-    color: rgba(250, 247, 247, 0.8);
+    background-color: transparent; 
     padding: 1em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    
 }
 
+/* this controls the text in the site nav */
 header a {
-    color: rgba(243, 243, 243, 1);
-    text-decoration: none;
-}
+    color: rgb(0, 0, 0);
+    text-decoration: none; 
+}  
 
 header a:hover {
     color: rgb(0, 85, 255);
+    cursor: pointer;
 }
 
-/* CUSTOM STYLING */
+/* STYLING FOR THE NAV  */
 
 /* SITE ID*/
 .site-id h1 {
@@ -96,13 +97,13 @@ header a:hover {
 
 /* MAIN */
 main {
-    background: rgba(250, 227, 159, 0.05)
+    background: transparent;
 }
 
 /* FOOTER */
 footer {
-    border-top: 1px solid rgb(0, 0, 0, .05);
-    padding: 1em;
+    border-top: 1px solid rgba(219, 13, 13, 0.05);
+    padding: 4em;
 }
 
 
@@ -119,6 +120,7 @@ footer {
 .social-nav a {
     display: block;
     padding: 1em;
+    text-decoration: none;
 }
 
 /* LAYOUT */
@@ -131,9 +133,9 @@ section {
     padding: 5em 1em;
 }
 
-/* HERO SECTION */
+/* HERO SECTION for Homepage*/
 .hero {
-    background-color: rgba(192, 218, 255, 0.56);
+    background-color: transparent;
     color: rgba(28, 61, 128, 0.8);
     text-align: center;
     padding: 8em 1em;
@@ -149,7 +151,22 @@ section {
 .hero p {
     max-width: 50em;
     margin: 1em auto;
+    padding-bottom: 1em;
 }
+
+/* .cta-button {
+    background-color: #36acf0; 
+    color: rgb(255, 255, 255);
+    padding: 1em;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+} */
+
+.cta-button:hover {
+    background-color: #45a049; 
+} */
 
 /* FEATURE PROJECTS SECTION */
 .featured-works-heading {
@@ -176,7 +193,7 @@ section {
       grid-template-rows: auto; /* Cards will stack, and we don't need fixed height */
       gap: 20px; /* Adjust gap to add space between stacked cards */
     }
-  }
+}
 
 .ocard {
     position: sticky;
@@ -194,18 +211,21 @@ section {
     overflow: hidden;
     box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
     transform-origin: center top;
+    height: 100%; 
 }
 
 .ocard-image-container {
     display: flex;
     width: 100%;
-    height: 90svh;
+    height: 100%; 
+    overflow: hidden; 
 }
 
 .ocard-image {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: 95svh; 
+    object-fit: cover; 
+    aspect-ratio: 8;
     object-position: center;
 }
 
@@ -215,14 +235,14 @@ section {
     margin-bottom: 2em;
 }
 
-/* WORKS GRID SECTION */
+/* WORKS SECTION */
 
 .works-heading {
     color: navy;
     margin-bottom: 2em;
 }
 
-  /* Works Grid Container */
+  /* WORKS GRID CONTAINER */
 .works-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);  
@@ -230,7 +250,7 @@ section {
     gap: 20px;  
     padding: 20px;
 }
-  /* Square Grid Item */
+  /* WORKS GRID ITEMS */
 .works-project {
     background-color: #4CAF50;
     color: white;
@@ -278,10 +298,10 @@ section {
   /* Set up the grid container */
 .project-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Default: 1 column (full-width) */
-    gap: 20px; /* Space between grid items */
+    grid-template-columns: 1fr; 
+    gap: 20px; 
     padding: 20px;
-    grid-template-rows: auto; /* Allow rows to expand as needed */
+    grid-template-rows: auto; 
 }
 
   /* Project card styling */
@@ -304,20 +324,6 @@ section {
     height: 100%;
     object-fit: cover;
     object-position: center;
-}
-
-  /* Overlay for project information */
-.project-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.6); 
-    color: white;
-    padding: 20px;
-    text-align: center;
-    display: none; 
-    transition: opacity 0.3s ease;
 }
 
   /* Full-width cards */
@@ -413,4 +419,43 @@ section {
 .project-card.full-width {
     grid-column: span 1; 
 }
+}
+
+
+/* HERO SECTION CASE STUDIES */
+.project-hero {
+    position: relative;
+    background: url('https://placehold.co/1980x1000') no-repeat center center/cover;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.project-hero-content {
+    position: absolute; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    color: rgba(61, 126, 255, 0.8);
+    text-align: center;
+    padding: 1em;
+}
+
+.project-hero-content h1 {
+    font-size: 5em;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.project-hero-content p {
+    font-size: 20px;
+    max-width: 50em;
+    margin: 1em auto;
+    padding-bottom: 1em;
 }
