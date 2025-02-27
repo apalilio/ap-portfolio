@@ -29,6 +29,51 @@
             #TOGGLE-NAV (Default for Small Screens)
 --------------------------------- */
 
+/* VARIABLES */
+:root {
+    /* DEFINE ALL COMMONLY USED COLORS HERE */
+
+    --color-body-background: rgb(255 255 255);
+    --color-text-body: rgba(0 0 0 / .8);
+    --color-text-headings: rgb(0 0 0 / 1);
+
+    /* --color-body-background: rgb(0, 0, 0);
+    --color-text-body: rgba(255, 255, 255 / .8);
+    --color-text-headings: rgb(255, 255, 255 / 1); */
+
+    --color-links: blue;
+    --color-links-hover: darkblue;
+    --color-links-dark: rgb(102 102 102);
+    --color-links-darker: rgb(0 0 0);
+    --color-links-light: rgb(204 204 204);
+    --color-links-lighter: rgb(255 255 255);
+
+    --color-siteheader-background: transparent;
+    --color-siteheader-links: var(--color-text-headings);
+
+    --color-hero-background: rgb(100 100 100);
+    --color-hero-text: rgb(255 255 255 / .8);
+    --color-hero-headings: rgb(255 255 255 / 1);
+
+    --color-sitefooter-background: rgb(100 100 100);
+    --color-sitefooter-text: rgb(255 255 255 / .8);
+    --color-sitefooter-headings: rgb( 255 255 255 / 1);
+    --color-sitefooter-links: rgb(255 255 255);
+
+
+
+    /* DEFINE ALL FONTS USED HERE */
+    --font-body: system-ui, Helvetica, Arial, sans-serif;
+    --font-headings: system-ui, Helvetica, Arial, sans-serif;
+
+    /* SIZING UNITS */
+    --container-width: 1200px;
+    --unit-small: 1em;
+    --unit-medium: 2em;
+    --unit-large: 4em;
+
+}
+
 /* GLOBGAL RESET */
 body {
     margin: 0;
