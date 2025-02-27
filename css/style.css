@@ -86,6 +86,141 @@ body {
     box-sizing: border-box;
 }
 
+/* GLOBAL COLORS */
+
+body {
+
+    /* SET THE COLOR OF THE MAIN BODY BACKGROUND */
+    background-color: var(--color-body-background);
+
+    /* SET THE COLOR OF THE MAIN BODY TEXT */
+    color: var(--color-text-body);
+
+}
+
+h1,
+h2,
+h3 {
+
+    /* SET THE COLOR OF ALL HEADINGS H1-etc */
+
+    color: var(--color-text-headings);
+
+}
+
+a {
+    /* SET THE COLOR OF ALL TEXT LINKS */
+    color: var(--color-links);
+
+    &:hover {
+        /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
+        color: var(--color-links-hover);
+    }
+}
+
+/* GLOBAL TYPOGRAPHY */
+
+body {
+
+    /* SET THE FONT FOR ALL MAIN BODY TEXT */
+    font-family: var(--font-body);
+
+    /* SET THE LEADING (LINE-HEIGHT) FOR ALL BODY TEXT */
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+
+    /* SET THE FONT AND MARGIN FOR ALL HEADINGS */
+    font-family: var(--font-headings);
+    margin: .4em 0;
+}
+
+h1 {
+
+    /* SET H1 FONT SIZE*/
+    font-size: 3em;
+
+    /* SET H1 LEADING*/
+    line-height: 1.1;
+}
+
+h2 {
+
+    /* SET H2 FONT SIZE*/
+    font-size: 2em;
+
+    /* SET H2 LEADING*/
+    line-height: 1.2;
+}
+
+h3 {
+
+    /* SET H3 FONT SIZE*/
+    font-size: 1.5em;
+
+    /* SET H3 LEADING*/
+    line-height: 1.3;
+}
+
+p {
+
+    /* LIMIT THE WIDTH OF ALL PARAGRAPHS */
+    max-width: 65ch;
+
+    /* NEW SCHOOL WIDOW SLAYER */
+    text-wrap: pretty;
+}
+
+/* GLOBAL MEDIA */
+
+img {
+
+    /* MAKE ALL IMAGES SHRINK ON SMALL SCREENS */
+    max-width: 100%;
+    height: auto;
+}
+
+/* GLOBAL HELPERS */
+
+/*  HIDE ELEMENTVISUALLY BUT NOT FROM SCREEN READERS AND SEARCH ENGINES  */
+.hide-visually {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+
+/* ---------LAYOUT----------- */
+
+
+/* RESPONSIVE TYPOGRAPHY VIA MEDIA QUARIES */
+
+/* SMALL SCREENS (MOBILE < 768px) */
+body {
+    /* SET THE DEFAULT FONT SIZE TO 14px */
+    font-size: 87.5%;
+}
+
+/* MEDIUM SCREENS (TABLETS < 1200px) */
+
+@media (min-width: 768px) {
+    body {
+        /* SET THE MEDIA SCREENS AND HIGHER FONT SIZE TO 16px */
+        font-size: 100%;
+    }
+}
+
+/* LARGE SCREENS (LAPTOPS &B DESKTOPS > 1200px) */
+
+@media (min-width: 1200px) {
+    body {
+        /* SET THE LARGE SCREENS AND HIGHER FONT SIZE TO 18px */
+        font-size: 112.5%;
+    }
+}
 
 
 /* SITE NAV HEADER */
