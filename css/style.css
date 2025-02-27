@@ -1,40 +1,49 @@
-/* #BASE CSS (Initital Setup)
+/* 
 ---------------------------------
-    #BASE CONTENT
-        #TYPOGRAPHY
-            #BODY
-            #HEADINGS
-            #PARAGRAPHS
-            #LINKS
-            #HELPERS
-        #MEDIA
-            #IMAGES
-        #COMPONENTS
-            #BUTTONS
-    #BASE LAYOUT
-        #SIMPLE RESET
-        #MEDIAQUERIES
-        #CONTAINER
-        #GRID SYSTEM
-            #CLEARFIX
-    #BASE SITE
-        #SITE STR UCTURE
-            #HEADER
-                # site-id (LOGO)
-            #FOOTER 
-            #SECTIONS
-            #SUB PAGES
-                #ARTICLES
-        #SITE NAVIGATION
-            #TOGGLE-NAV (Default for Small Screens)
+CSS TABLE OF CONTENTS 
+
+# GLOBAL STYLES
+    # GLOBAL VARIABLES
+    # GLOBAL RESETS
+    # GLOBAL COLORS
+    # GLOBAL TYPOGRAPHY
+    # GLOBAL MEDIA 
+    # GLOBAL HELPERS
+
+# LAYOUT
+    # MEDIA QUERIES / BREAKPOINTS ( RESPONSIVE TYPOGRAPHY ) 
+    # CONTAINER
+    # GRID
+
+# SITE STRUCTURE 
+    # HEADER
+        # LOGO
+        # SITE NAV
+            # TOGGLE MENU
+        # SITE-HEADER-ON-TOP-OF-HERO
+    # MAIN
+        # SECTION
+            # HERO
+    # FOOTER
+
+# UI COMPONETS
+    # BUTTONS
+    # CARDS
+
+
+# ANIMATION 
+    # SMOOTH SCROLLING 
+
+
+# CUSTOM STYLING 
 --------------------------------- */
 
 /* VARIABLES */
 :root {
     /* DEFINE ALL COMMONLY USED COLORS HERE */
 
-    --color-body-background: rgb(255 255 255);
-    --color-text-body: rgba(0 0 0 / .8);
+    --color-body-background: rgb(255, 255, 255);
+    --color-text-body: rgba(0, 0, 0, 0.8);
     --color-text-headings: rgb(0 0 0 / 1);
 
     /* --color-body-background: rgb(0, 0, 0);
@@ -61,7 +70,6 @@
     --color-sitefooter-links: rgb(255 255 255);
 
 
-
     /* DEFINE ALL FONTS USED HERE */
     --font-body: system-ui, Helvetica, Arial, sans-serif;
     --font-headings: system-ui, Helvetica, Arial, sans-serif;
@@ -73,6 +81,45 @@
     --unit-large: 4em;
 
 }
+/* ---------LAYOUT----------- */
+
+
+/* RESPONSIVE TYPOGRAPHY VIA MEDIA QUARIES */
+
+/* SMALL SCREENS (MOBILE < 768px) */
+body {
+    /* SET THE DEFAULT FONT SIZE TO 14px */
+    font-size: 87.5%;
+}
+
+/* MEDIUM SCREENS (TABLETS < 1200px) */
+
+@media (min-width: 768px) {
+    body {
+        /* SET THE MEDIA SCREENS AND HIGHER FONT SIZE TO 16px */
+        font-size: 100%;
+    }
+}
+
+/* LARGE SCREENS (LAPTOPS &B DESKTOPS > 1200px) */
+
+@media (min-width: 1200px) {
+    body {
+        /* SET THE LARGE SCREENS AND HIGHER FONT SIZE TO 18px */
+        font-size: 112.5%;
+    }
+}
+
+/* CONTAINER */
+.container {
+    /* SET THE MAX WIDTH OF YOUR SITE (eg 1200px) */
+    max-width: var(--container-width);
+
+
+    /* CENTER THE CONTAINER HORIZONTALLY */
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* GLOBGAL RESET */
 body {
@@ -83,19 +130,96 @@ body {
 }
 
 /* GLOBAL COLORS*/
-a {
-    color: rgba(53, 121, 184, 0.734);
+
+body {
+
+    /* SET THE COLOR OF THE MAIN BODY BACKGROUND */
+    background-color: var(--color-body-background);
+
+    /* SET THE COLOR OF THE MAIN BODY TEXT */
+    color: var(--color-text-body);
+
+    a {
+        color: rgba(53, 121, 184, 0.734);
+    }
+    
+    a:hover {
+        color: rgb(0, 85, 255);
+    }
 }
 
-a:hover {
-    color: rgb(0, 85, 255);
-}
 
 /* GLOBAL TYPOGRAPHY*/
 body {
-    font-family: Helvetica, Arial, sans-serif;
-    /* font-size: 88.75%; */
-    line-height: 1.4;
+
+    /* SET THE FONT FOR ALL MAIN BODY TEXT */
+    font-family: var(--font-body);
+
+    /* SET THE LEADING (LINE-HEIGHT) FOR ALL BODY TEXT */
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+
+    /* SET THE FONT AND MARGIN FOR ALL HEADINGS */
+    font-family: var(--font-headings);
+    margin: .4em 0;
+}
+
+h1 {
+
+    /* SET H1 FONT SIZE*/
+    font-size: 3em;
+
+    /* SET H1 LEADING*/
+    line-height: 1.1;
+}
+
+h2 {
+
+    /* SET H2 FONT SIZE*/
+    font-size: 2em;
+
+    /* SET H2 LEADING*/
+    line-height: 1.2;
+}
+
+h3 {
+
+    /* SET H3 FONT SIZE*/
+    font-size: 1.5em;
+
+    /* SET H3 LEADING*/
+    line-height: 1.3;
+}
+
+p {
+
+    /* LIMIT THE WIDTH OF ALL PARAGRAPHS */
+    max-width: 65ch;
+
+    /* NEW SCHOOL WIDOW SLAYER */
+    text-wrap: pretty;
+}
+
+/* GLOBAL MEDIA */
+
+img {
+
+    /* MAKE ALL IMAGES SHRINK ON SMALL SCREENS */
+    max-width: 100%;
+    height: auto;
+}
+
+/* GLOBAL HELPERS */
+
+/*  HIDE ELEMENTVISUALLY BUT NOT FROM SCREEN READERS AND SEARCH ENGINES  */
+.hide-visually {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }
 
 /* SITE NAV HEADER */
@@ -503,4 +627,12 @@ section {
     max-width: 50em;
     margin: 1em auto;
     padding-bottom: 1em;
+}
+
+/* ---------ANIMATION----------- */
+
+/*  ADD SUPPORT FOR SMOOTH SCROOL */
+
+html {
+    scroll-behavior: smooth;
 }
