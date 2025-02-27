@@ -81,34 +81,6 @@ CSS TABLE OF CONTENTS
     --unit-large: 4em;
 
 }
-/* ---------LAYOUT----------- */
-
-
-/* RESPONSIVE TYPOGRAPHY VIA MEDIA QUARIES */
-
-/* SMALL SCREENS (MOBILE < 768px) */
-body {
-    /* SET THE DEFAULT FONT SIZE TO 14px */
-    font-size: 87.5%;
-}
-
-/* MEDIUM SCREENS (TABLETS < 1200px) */
-
-@media (min-width: 768px) {
-    body {
-        /* SET THE MEDIA SCREENS AND HIGHER FONT SIZE TO 16px */
-        font-size: 100%;
-    }
-}
-
-/* LARGE SCREENS (LAPTOPS &B DESKTOPS > 1200px) */
-
-@media (min-width: 1200px) {
-    body {
-        /* SET THE LARGE SCREENS AND HIGHER FONT SIZE TO 18px */
-        font-size: 112.5%;
-    }
-}
 
 /* CONTAINER */
 .container {
@@ -204,23 +176,6 @@ p {
     text-wrap: pretty;
 }
 
-/* GLOBAL MEDIA */
-
-img {
-
-    /* MAKE ALL IMAGES SHRINK ON SMALL SCREENS */
-    max-width: 100%;
-    height: auto;
-}
-
-/* GLOBAL HELPERS */
-
-/*  HIDE ELEMENTVISUALLY BUT NOT FROM SCREEN READERS AND SEARCH ENGINES  */
-.hide-visually {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-}
 
 /* SITE NAV HEADER */
 header {
