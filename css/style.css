@@ -43,8 +43,10 @@ CSS TABLE OF CONTENTS
     /* DEFINE ALL COMMONLY USED COLORS HERE */
 
     --color-body-background: rgb(255, 255, 255);
-    --color-text-body: rgba(28, 61, 128);
-    --color-text-headings: rgba(28, 61, 128);
+    --color-text-body: rgb(0, 0, 0);
+    --color-text-headings-h1: rgb(108, 120, 144);
+    --color-text-headings-h2: rgb(197, 13, 86);
+    --color-text-headings-h4: rgb(0, 0, 0);
 
     --color-links: blue;
     --color-links-hover: darkblue;
@@ -56,7 +58,7 @@ CSS TABLE OF CONTENTS
     --color-siteheader-background: transparent;
     --color-siteheader-links: var(--color-text-headings);
 
-    --color-hero-background: rgb(100 100 100);
+    --color-hero-background: rgb(216, 127, 127);
     --color-hero-text: rgb(255 255 255 / .8);
     --color-hero-headings: rgb(255 255 255 / 1);
 
@@ -98,14 +100,25 @@ body {
 
 }
 
-h1,
-h2,
-h3 {
+h1 {
 
     /* SET THE COLOR OF ALL HEADINGS H1-etc */
 
-    color: var(--color-text-headings);
+    color: var(--color-text-headings-h1);
+}
 
+h2 {
+
+    /* SET THE COLOR OF ALL HEADINGS H1-etc */
+
+    color: var(--color-text-headings-h2);
+}
+
+h4 {
+
+    /* SET THE COLOR OF ALL HEADINGS H1-etc */
+
+    color: var(--color-text-headings-h4);
 }
 
 a {
@@ -168,7 +181,7 @@ h3 {
 p {
 
     /* LIMIT THE WIDTH OF ALL PARAGRAPHS */
-    max-width: 65ch;
+    max-width: 110ch;
 
     /* NEW SCHOOL WIDOW SLAYER */
     text-wrap: pretty;
@@ -334,13 +347,13 @@ section {
     transition: background-color 0.3s ease;
 } */
 
-.cta-button:hover {
+/* .cta-button:hover {
     background-color: #45a049; 
-} */
+}  */
 
 /* FEATURE PROJECTS SECTION */
 .featured-works-heading {
-    color: rgb(170, 0, 255);
+    color: rgb(85, 0, 128);
     margin-bottom: 2em;
 }
 
@@ -360,7 +373,7 @@ section {
 /* Adjust gap when stacking cards */
 @media (max-width: 768px) {
     .overlapping-cards {
-      grid-template-rows: auto; /* Cards will stack, and we don't need fixed height */
+      grid-template-rows: auto; 
       gap: 20px; /* Adjust gap to add space between stacked cards */
     }
 }
@@ -399,10 +412,22 @@ section {
     object-position: center;
 }
 
+.project-name {
+    position: absolute;
+    bottom: -100%;
+    left: 50%; 
+    transform: translateX(-50%); 
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    font-size: 4em;
+    font-weight: bold;
+    transition: none;
+}
 
-.featured-works-heading {
-    color: red;
-    margin-bottom: 2em;
+.ocard:hover .project-name {
+    bottom: 20px; 
+    transform: translateX(-50%) translateY(-50%); 
 }
 
 /* WORKS SECTION */
@@ -503,8 +528,8 @@ section {
     width: 100%;
     position: relative;
     
-    padding-top: 66.66%; /* 3:2 aspect ratio (height/width = 2/3 -> 2/3 * 100 = 66.66%) */
-    height: 0; /* Set height to 0 so it is determined by padding-top */
+    padding-top: 66.66%; 
+    height: 0; 
     overflow: hidden;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -595,8 +620,8 @@ section {
 /* HERO SECTION CASE STUDIES */
 .project-hero {
     position: relative;
-    background: url('https://placehold.co/1980x1000') no-repeat center center/cover;
-    height: 85vh;
+    background: url('https://placehold.co/600x400') no-repeat center center/cover;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
