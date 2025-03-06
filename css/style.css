@@ -448,7 +448,7 @@ section {
     opacity: 0; 
     visibility: hidden; 
     transition: opacity 0.3s ease, visibility 0s 0.3s; 
-    color: white; /* Text color */
+    color: rgb(4, 3, 3); /* Text color */
 }
 /* Show text on hover */
 .works-project:hover p {
