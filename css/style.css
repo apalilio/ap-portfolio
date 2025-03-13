@@ -359,10 +359,10 @@ section {
 /* OVERLAPPING CARDS */
 .overlapping-cards {
     width: 100%;
-    max-width: 1480px;
+    /* max-width: 1450px; */
     margin: 0 auto;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
     border: 1.5px solid red;
     display: grid;
     /* grid-template-rows: repeat(var(--cards-count), var(--card-height)); */
@@ -370,19 +370,19 @@ section {
 }
 
 /* Adjust gap when stacking cards */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .overlapping-cards {
     grid-template-rows: auto; 
-      gap: 20px; /* Adjust gap to add space between stacked cards */
+      gap: 20px; 
     }
-}
+} */
 
 .ocard {
     position: sticky;
     top: 0;
     bottom: 4;
     z-index: 10;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .inner-ocard {
@@ -399,7 +399,7 @@ section {
 .ocard-image-container {
     display: flex;
     width: 100%;
-    height: 90svh; 
+    height: 90vh; 
     overflow: hidden; 
     background-position: bottom;
 
@@ -408,7 +408,7 @@ section {
     width: 100%;
     height: 100%; 
     object-fit: cover; 
-    /* aspect-ratio: 1.7; */
+    aspect-ratio: 2.5;
 }
 
 .project-name {
@@ -430,9 +430,8 @@ section {
 }
 
 /* WORKS SECTION */
-
 .works-heading {
-    color: navy;
+    color: rgb(138, 138, 248);
     margin-bottom: 2em;
 }
 
@@ -443,6 +442,7 @@ section {
     grid-template-rows: repeat(2, 1fr); 
     gap: 20px;  
     padding: 20px;
+    border: 1.5px solid red;
 }
   /* WORKS GRID ITEMS */
 .works-project {
