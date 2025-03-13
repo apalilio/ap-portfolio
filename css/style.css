@@ -372,7 +372,7 @@ section {
 /* Adjust gap when stacking cards */
 @media (max-width: 768px) {
     .overlapping-cards {
-      grid-template-rows: auto; 
+    grid-template-rows: auto; 
       gap: 20px; /* Adjust gap to add space between stacked cards */
     }
 }
@@ -648,7 +648,7 @@ section {
     max-width: none;
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .image-wrapper-fullwidth-cover {
