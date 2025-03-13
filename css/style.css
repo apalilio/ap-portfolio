@@ -42,7 +42,7 @@ CSS TABLE OF CONTENTS
 :root {
     /* DEFINE ALL COMMONLY USED COLORS HERE */
 
-    --color-body-background: rgb(255, 255, 255);
+    --color-body-background: rgb(255, 252, 245);
     --color-text-body: rgb(0, 0, 0);
     --color-text-headings-h1: rgb(108, 120, 144);
     --color-text-headings-h2: rgb(197, 13, 86);
@@ -58,7 +58,7 @@ CSS TABLE OF CONTENTS
     --color-siteheader-background: transparent;
     --color-siteheader-links: var(--color-text-headings);
 
-    --color-hero-background: rgb(216, 127, 127);
+    --color-hero-background: rgb(255, 255, 255);
     --color-hero-text: rgb(255 255 255 / .8);
     --color-hero-headings: rgb(255 255 255 / 1);
 
@@ -66,6 +66,10 @@ CSS TABLE OF CONTENTS
     --color-sitefooter-text: rgb(255 255 255 / .8);
     --color-sitefooter-headings: rgb( 255 255 255 / 1);
     --color-sitefooter-links: rgb(255 255 255);
+
+    --color-worksproject-background: rgb(237, 253, 226);
+    --color-worksproject-altcolor: rgb(29, 8, 8);
+    --color-worksproject-textcolor: rgb(115, 0, 255);
 
 
     /* DEFINE ALL FONTS USED HERE */
@@ -353,7 +357,7 @@ section {
 /* FEATURE PROJECTS SECTION */
 .featured-works-heading {
     color: rgb(85, 0, 128);
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 /* OVERLAPPING CARDS */
@@ -366,14 +370,14 @@ section {
     border: 1.5px solid red;
     display: grid;
     /* grid-template-rows: repeat(var(--cards-count), var(--card-height)); */
-    gap: 30px; /* adds space between rows */
+    gap: 10px; /* adds space between rows */
 }
 
 /* Adjust gap when stacking cards */
 /* @media (max-width: 768px) {
     .overlapping-cards {
     grid-template-rows: auto; 
-      gap: 20px; 
+    gap: 10px; 
     }
 } */
 
@@ -382,7 +386,7 @@ section {
     top: 0;
     bottom: 4;
     z-index: 10;
-    /* margin-bottom: 10px; */
+    /* margin-bottom: 0.5px; */
 }
 
 .inner-ocard {
@@ -393,22 +397,22 @@ section {
     overflow: hidden;
     box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
     transform-origin: center top;
-    height: 100%; 
+    height: 81%; 
 }
 
 .ocard-image-container {
     display: flex;
-    width: 100%;
-    height: 90vh; 
+    max-width: none;
+    height: auto; 
     overflow: hidden; 
     background-position: bottom;
 
 }
 .ocard-image {
-    width: 100%;
+    max-width: 100%;
     height: 100%; 
     object-fit: cover; 
-    aspect-ratio: 2.5;
+    aspect-ratio: 1.7;
 }
 
 .project-name {
@@ -432,7 +436,7 @@ section {
 /* WORKS SECTION */
 .works-heading {
     color: rgb(138, 138, 248);
-    margin-bottom: 2em;
+    margin-bottom: em;
 }
 
   /* WORKS GRID CONTAINER */
@@ -446,8 +450,8 @@ section {
 }
   /* WORKS GRID ITEMS */
 .works-project {
-    background-color: #82b8ff;
-    color: white;
+    background-color: var(--color-worksproject-background);
+    color: var(--color-worksproject-altcolor);
     position: relative; 
     padding-top: 100%;  
     text-align: center;
@@ -472,7 +476,7 @@ section {
     opacity: 0; 
     visibility: hidden; 
     transition: opacity 0.3s ease, visibility 0s 0.3s; 
-    color: rgb(4, 3, 3); /* Text color */
+    color: var(--color-worksproject-textcolor); 
 }
 /* Show text on hover */
 .works-project:hover p {
@@ -509,6 +513,7 @@ section {
     justify-content: space-between; 
     height: 100%;
 }
+
   /* Image inside card */
 .project-image {
     position: absolute;
@@ -653,13 +658,13 @@ section {
 
 .image-wrapper-fullwidth-cover {
     width: 100%;
-    height: 95svh;
+    height: 100%;
     overflow: hidden;
 }
 
 .image-wrapper-fullwidth-cover img {
     max-width: none;
-    height: 100%;
+    height: auto;
     width: 100%;
     object-fit: cover;
 }

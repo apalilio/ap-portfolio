@@ -6,7 +6,7 @@ const cards = document.querySelectorAll(".ocard");
 cardsContainer.style.setProperty("--cards-count", cards.length);
 cardsContainer.style.setProperty("--card-height", `${cards[0].clientHeight}px`);
 Array.from(cards).forEach((card, index) => {
-  const offsetTop = 40 + index * 40;
+  const offsetTop = 15 + index * 1;
   card.style.paddingTop = `${offsetTop}px`;
   if (index === cards.length - 1) {
     return;
