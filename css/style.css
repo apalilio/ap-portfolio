@@ -279,9 +279,8 @@ header a:hover {
 }
 
 /* MAIN */
-main {
-    background: transparent;
-}
+/* main {
+} */
 
 /* FOOTER */
 footer {
@@ -400,15 +399,16 @@ section {
 .ocard-image-container {
     display: flex;
     width: 100%;
-    height: 100%; 
+    height: 90svh; 
     overflow: hidden; 
-}
+    background-position: bottom;
 
+}
 .ocard-image {
     width: 100%;
-    height: 95svh; 
-    object-fit: cover; 
-    aspect-ratio: 8;
+    height: 100%; 
+    object-fit: contain; 
+    aspect-ratio: 1.7;
     object-position: center;
 }
 
@@ -619,26 +619,50 @@ section {
 
 /* HERO SECTION CASE STUDIES */
 .project-hero {
-    position: relative;
-    background: url('https://placehold.co/600x400') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-    margin-top: 2em;
-    margin-left: 2em;
-    margin-right: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    border: 1.5px solid red;
 }
 
-.project-hero-content {
-    position: absolute; 
-    bottom: 20px; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    color: rgba(61, 126, 255, 0.8);
-    text-align: center;
-    padding: 1em;
+.project-hero .image-wrapper {
+    max-width: 1920px;
+}
+
+.hero:has(.image-wrapper-fullwidth) {
+    padding: 0;
+}
+
+.project-hero .image-wrapper-fullwidth {
+    background-color: #c7c3ba;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.project-hero .image-wrapper-fullwidth img {
+    max-width: none;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.image-wrapper-fullwidth-cover {
+    width: 100%;
+    height: 95svh;
+    overflow: hidden;
+}
+
+.image-wrapper-fullwidth-cover img {
+    max-width: none;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .project-hero-content h1 {
@@ -650,9 +674,84 @@ section {
 
 .project-hero-content p {
     font-size: 20px;
-    max-width: 50em;
+    max-width: 100%;
     margin: 1em auto;
     padding-bottom: 1em;
+}
+
+
+@media (min-width: 768px) {
+    .row {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--gridgap);
+    }
+
+    /* COMMONLY USED COLUMN WIDTHS */
+    .one-half {grid-column: auto / span 6;}
+    .one-third {grid-column: auto / span 4;}
+    .two-thirds {grid-column: auto / span 8;}
+    .one-fourth {grid-column: auto / span 3;}
+    .three-fourths {grid-column: auto / span 9;}
+
+    /*  12 GRID COLUMN CLASSES */
+    .col-1 {grid-column: auto / span 1;}
+    .col-2 {grid-column: auto / span 2;}
+    .col-3 {grid-column: auto / span 3;}
+    .col-4 {grid-column: auto / span 4;}
+    .col-5 {grid-column: auto / span 5;}
+    .col-6 {grid-column: auto / span 6;}
+    .col-7 {grid-column: auto / span 7;}
+    .col-8 {grid-column: auto / span 8;}
+    .col-9 {grid-column: auto / span 9;}
+    .col-10 {grid-column: auto / span 10;}
+    .col-11 {grid-column: auto / span 11;}
+    .col-12 {grid-column: auto / span 12;}
+
+    /* CENTERED COLUMS */
+    .one-half.centered {grid-column: 4 / span 6;}
+    .one-third.centered {grid-column: 5 / span 4;}
+    .two-thirds.centered {grid-column: 3 / span 8;}
+
+    /* PUSHES */
+    .push-1 {grid-column-start: 2;}
+    .push-2 {grid-column-start: 3;}
+    .push-3 {grid-column-start: 4;}
+    .push-4 {grid-column-start: 5;}
+    .push-5 {grid-column-start: 6;}
+    .push-6 {grid-column-start: 7;}
+    .push-7 {grid-column-start: 8;}
+    .push-8 {grid-column-start: 9;}
+    .push-9 {grid-column-start: 10;}
+    .push-10 {grid-column-start: 11;}
+    .push-11 {grid-column-start: 12;}
+
+
+    /* SWAP (REVERSE) COLUMNS - WORKS ONLY w/ 2 CHILDREN */
+    .row.swapped>*:first-child {
+        order: 2;
+    }
+
+    .row.swapped>*:last-child {
+        order: 1;
+    }
+
+}
+
+.challenge {
+    max-width: 1920px;
+    display: grid;
+    margin: 0 auto;
+}
+.challenge h4 {
+    text-transform: uppercase;
+}
+
+.challenge li {
+    list-style: none;
+    padding-right: 3em;
+    line-height: 1.75;
+    border: 2px red;
 }
 
 /* ---------ANIMATION----------- */
@@ -662,3 +761,5 @@ section {
 html {
     scroll-behavior: smooth;
 }
+
+
