@@ -73,8 +73,8 @@ CSS TABLE OF CONTENTS
 
 
     /* DEFINE ALL FONTS USED HERE */
-    --font-body: system-ui, Helvetica, Arial, sans-serif;
-    --font-headings: system-ui, Helvetica, Arial, sans-serif;
+    --font-body: sofia, minion, sans-serif;
+    --font-headings: minion, serif;
 
     /* SIZING UNITS */
     --container-width: 1200px;
@@ -356,8 +356,9 @@ section {
 
 /* FEATURE PROJECTS SECTION */
 .featured-works-heading {
-    color: rgb(85, 0, 128);
+    color: rgb(111, 255, 0);
     margin-bottom: 1em;
+    text-transform: uppercase;
 }
 
 /* OVERLAPPING CARDS */
@@ -367,7 +368,7 @@ section {
     margin: 0 auto;
     padding-left: 1em;
     padding-right: 1em;
-    border: 1.5px solid red;
+    /* border: 1.5px solid red; */
     display: grid;
     /* grid-template-rows: repeat(var(--cards-count), var(--card-height)); */
     gap: 10px; /* adds space between rows */
@@ -437,7 +438,10 @@ section {
 .works-heading {
     color: rgb(138, 138, 248);
     margin-bottom: em;
+    text-transform: uppercase;
 }
+
+
 
   /* WORKS GRID CONTAINER */
 .works-grid {
@@ -446,7 +450,7 @@ section {
     grid-template-rows: repeat(2, 1fr); 
     gap: 20px;  
     padding: 20px;
-    border: 1.5px solid red;
+    /* border: 1.5px solid red; */
 }
   /* WORKS GRID ITEMS */
 .works-project {
@@ -742,21 +746,63 @@ section {
 
 }
 
-.challenge {
-    max-width: 1920px;
-    display: grid;
-    margin: 0 auto;
+/* INTRO SECTION STYLING */
+/* .intro p {
+    max-width: 35em;
+} */
+
+.project-meta-list li {
+    list-style: none;
+    font-size: 1em;
 }
-.challenge h4 {
+
+li {
+    line-height: 2;
+}
+
+@media (min-width:768px) {
+    .project-meta-list {
+        margin: 0;
+        padding: 2em;
+        /* padding-right: 2em; */
+        /* border: 3px solid red; */
+    }
+    .container-content {
+        padding: 0 4%;
+    }
+
+}
+.caps {
+    text-transform: uppercase;
+}
+.p-top {
+    padding-top: .5em;
+}
+
+.container.wide {
+    max-width: 1600px;
+}
+.container-content {
+    padding: 0 8%;
+}
+
+.container-content h5 {
     text-transform: uppercase;
 }
 
-.challenge li {
+/* .challenge {
+    max-width: 1920px;
+    display: grid;
+    margin: 0 auto;
+} */
+
+
+/* .challenge li {
     list-style: none;
     padding-right: 3em;
     line-height: 1.75;
     border: 2px red;
-}
+} */
 
 /* ---------ANIMATION----------- */
 
