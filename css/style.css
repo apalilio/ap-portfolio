@@ -45,7 +45,7 @@ CSS TABLE OF CONTENTS
     --color-body-background: rgb(255, 252, 245);
     --color-text-body: rgb(0, 0, 0);
     --color-text-headings-h1: rgb(108, 120, 144);
-    --color-text-headings-h2: rgb(197, 13, 86);
+    --color-text-headings-h2: rgb(0, 95, 24);
     --color-text-headings-h4: rgb(0, 0, 0);
 
     --color-links: blue;
@@ -62,19 +62,19 @@ CSS TABLE OF CONTENTS
     --color-hero-text: rgb(255 255 255 / .8);
     --color-hero-headings: rgb(255 255 255 / 1);
 
-    --color-sitefooter-background: rgb(100 100 100);
+    --color-sitefooter-background: rgb(0, 0, 0);
     --color-sitefooter-text: rgb(255 255 255 / .8);
     --color-sitefooter-headings: rgb( 255 255 255 / 1);
     --color-sitefooter-links: rgb(255 255 255);
 
-    --color-worksproject-background: rgb(237, 253, 226);
+    --color-worksproject-background: rgb(255, 255, 255);
     --color-worksproject-altcolor: rgb(29, 8, 8);
-    --color-worksproject-textcolor: rgb(115, 0, 255);
+    --color-worksproject-textcolor: rgb(255, 255, 255);
 
 
     /* DEFINE ALL FONTS USED HERE */
-    --font-body: sofia, minion, sans-serif;
-    --font-headings: minion, serif;
+    --font-body: minion, serif;
+    --font-headings: sofia, sans-serif;
 
     /* SIZING UNITS */
     --container-width: 1200px;
@@ -288,8 +288,11 @@ header a:hover {
 
 /* FOOTER */
 footer {
-    border-top: 1px solid rgba(219, 13, 13, 0.05);
+    color: var(--color-sitefooter-background);
+    /* border-top: 1px solid rgba(24, 15, 15, 0.05); */
     padding: 4em;
+    border: 1.5px solid red;
+
 }
 
 
@@ -300,7 +303,7 @@ footer {
     margin: 0;
     padding: 0;
     list-style: none;
-
+    border: 1.5px solid red;
 }
 
 .social-nav a {
@@ -356,7 +359,7 @@ section {
 
 /* FEATURE PROJECTS SECTION */
 .featured-works-heading {
-    color: rgb(111, 255, 0);
+    color: rgb(0, 0, 82);
     margin-bottom: 1em;
     text-transform: uppercase;
 }
@@ -407,8 +410,8 @@ section {
     height: auto; 
     overflow: hidden; 
     background-position: bottom;
-
 }
+
 .ocard-image {
     max-width: 100%;
     height: 100%; 
@@ -480,6 +483,7 @@ section {
     opacity: 0; 
     visibility: hidden; 
     transition: opacity 0.3s ease, visibility 0s 0.3s; 
+    text-transform: uppercase;
     color: var(--color-worksproject-textcolor); 
 }
 /* Show text on hover */
@@ -764,6 +768,7 @@ li {
     .project-meta-list {
         margin: 0;
         padding: 2em;
+        text-wrap: pretty;
         /* padding-right: 2em; */
         /* border: 3px solid red; */
     }
@@ -774,6 +779,8 @@ li {
 }
 .caps {
     text-transform: uppercase;
+    font-family: var(--font-headings);
+
 }
 .p-top {
     padding-top: .5em;
@@ -783,11 +790,17 @@ li {
     max-width: 1600px;
 }
 .container-content {
-    padding: 0 8%;
+    padding: 0 2%;
+    margin-bottom: 0;
+}
+
+.container-content p {
+    font-size: 18px;
 }
 
 .container-content h5 {
     text-transform: uppercase;
+    font-family: var(--font-headings);
 }
 
 /* .challenge {
@@ -813,3 +826,9 @@ html {
 }
 
 
+/* ARAW STYLING */
+.araw-section-header {
+    padding-top: 0;
+    padding-left: 2em;
+    border: 1.5px solid red; 
+}
