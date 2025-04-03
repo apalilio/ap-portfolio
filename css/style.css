@@ -319,6 +319,13 @@ header a:hover {
     text-decoration: none;
 }
 
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--color-sitefooter-links);
+}
+
 
 
 /* SOCIAL NAV */
@@ -812,7 +819,7 @@ h2 {
     .two-thirds {grid-column: auto / span 8;}
     .one-fourth {grid-column: auto / span 3;}
     .three-fourths {grid-column: auto / span 9;}
-    .one-sixth {width: 1.667%}
+    .one-sixth {width: 16.667%}
 
     /*  12 GRID COLUMN CLASSES */
     .col-1 {grid-column: auto / span 1;}
@@ -943,6 +950,9 @@ html {
     font-size: 40px;
 } */
 
+.araw-process {
+    display: flex;
+}
 .process {
     /* padding-bottom: 0; */
 }
@@ -961,4 +971,26 @@ html {
 
 .assets {
     border: 3px red;
+    columns: 6;
+    scale: 1.2;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    
+}
+
+.assets img {
+    max-width: 100%;
+    height: auto;
+    scale: 5;
+    margin: 0 auto;
+    background-color: #DCDDC5;
+}
+
+.center {
+    text-align: center;
+}
+
+.araw-padding img {
+    margin: 2em;
+    scale: .7;
 }
