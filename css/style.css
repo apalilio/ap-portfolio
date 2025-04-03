@@ -42,13 +42,13 @@ CSS TABLE OF CONTENTS
 :root {
     /* DEFINE ALL COMMONLY USED COLORS HERE */
 
-    --color-body-background: rgb(255, 252, 245);
+    --color-body-background: rgb(255, 255, 255);
     --color-text-body: rgb(0, 0, 0);
     --color-text-headings-h1: rgb(108, 120, 144);
-    --color-text-headings-h2: rgb(0, 95, 24);
+    --color-text-headings-h2: rgb(0, 0, 0);
     --color-text-headings-h4: rgb(0, 0, 0);
 
-    --color-links: blue;
+    --color-links: rgb(0, 2, 132);
     --color-links-hover: darkblue;
     --color-links-dark: rgb(102 102 102);
     --color-links-darker: rgb(0 0 0);
@@ -62,7 +62,7 @@ CSS TABLE OF CONTENTS
     --color-hero-text: rgb(255 255 255 / .8);
     --color-hero-headings: rgb(255 255 255 / 1);
 
-    --color-sitefooter-background: rgb(0, 0, 0);
+    --color-sitefooter-background: #b20e34;
     --color-sitefooter-text: rgb(255 255 255 / .8);
     --color-sitefooter-headings: rgb( 255 255 255 / 1);
     --color-sitefooter-links: rgb(255 255 255);
@@ -73,8 +73,8 @@ CSS TABLE OF CONTENTS
 
 
     /* DEFINE ALL FONTS USED HERE */
-    --font-body: minion, serif;
-    --font-headings: sofia, sans-serif;
+    --font-body: sofia, sans-serif;
+    --font-headings: minion, serif;
 
     /* SIZING UNITS */
     --container-width: 1200px;
@@ -287,30 +287,55 @@ header a:hover {
 } */
 
 /* FOOTER */
-footer {
-    color: var(--color-sitefooter-background);
-    /* border-top: 1px solid rgba(24, 15, 15, 0.05); */
-    padding: 4em;
-    border: 1.5px solid red;
 
+.site-footer {
+    background-color: var(--color-sitefooter-background);
+    color: var( --color-sitefooter-headings);
+    font-family: var(--font-headings);
+    /* border-top: 1px solid rgba(24, 15, 15, 0.05); */
+    padding: 1em;
+}
+
+.site-footer a {
+    color: var(--color-sitefooter-links);
+}
+
+.eyebrow {
+    font-family: var(--font-body);
+    font-size: 30px;
+    text-transform: uppercase;
+    
+}
+.worknav li{
+    list-style: none;
+    text-decoration: none;
+    font-family: var(--font-body);
+    color: var(--color-sitefooter-links);
+}
+
+.footer-tags li { 
+    list-style: none;
+    font-family: var(--font-body);
+    text-decoration: none;
 }
 
 
+
 /* SOCIAL NAV */
-.social-nav ul {
+/* .social-nav ul {
     display: flex;
     justify-content: center;
     margin: 0;
     padding: 0;
     list-style: none;
     border: 1.5px solid red;
-}
+} */
 
-.social-nav a {
+/* .social-nav a {
     display: block;
     padding: 1em;
     text-decoration: none;
-}
+} */
 
 /* LAYOUT */
 .container {
@@ -319,22 +344,98 @@ footer {
 }
 
 section {
-    padding: 5em 1em;
+    padding: 1em 1em;
 }
 
 /* HERO SECTION for Homepage*/
+
 .hero {
     background-color: transparent;
     color: rgba(28, 61, 128, 0.8);
-    text-align: center;
-    padding: 8em 1em;
+    text-align: left;
+    padding: 8em 4em;
 }
 
 .hero h2 {
-    font-size: 5em;
-    line-height: 1;
+    font-size: 4em;
+    /* /* line-height: 1; */
     text-transform: uppercase;
-    margin: 0 auto;
+    margin: 0 auto; 
+
+    > span {
+		position: relative;
+		display: inline-block;
+		color: #b20e34;
+		height: 1.25em;
+		vertical-align: bottom;
+		overflow: hidden;
+
+        span {
+			display: block;
+			animation: animateWords 10s infinite ease;
+		}
+	}
+}
+
+@keyframes animateWords {
+	0% {
+		transform: translateY(0%);
+	}
+	
+	25% {
+		transform: translateY(-100%);
+	}
+	
+	50% {
+		transform: translateY(-200%);
+	}
+	
+	75% {
+		transform: translateY(-300%);
+	}
+	
+	100% {
+		transform: translateY(-400%);
+	}
+}
+
+h2 {
+	font-size: 3em;
+	
+	> span {
+		position: relative;
+		display: inline-block;
+		color: #b20e34;
+		height: 1.25em;
+		vertical-align: bottom;
+		overflow: hidden;
+		
+		span {
+			display: block;
+			animation: animateWords 5s infinite ease;
+		}
+	}
+}
+@keyframes animateWords {
+	0% {
+		transform: translateY(0%);
+	}
+	
+	25% {
+		transform: translateY(-100%);
+	}
+	
+	50% {
+		transform: translateY(-200%);
+	}
+	
+	75% {
+		transform: translateY(-300%);
+	}
+	
+	100% {
+		transform: translateY(-400%);
+	}
 }
 
 .hero p {
@@ -359,9 +460,12 @@ section {
 
 /* FEATURE PROJECTS SECTION */
 .featured-works-heading {
-    color: rgb(0, 0, 82);
+    color: rgb(0, 0, 0);
     margin-bottom: 1em;
+    padding-left: 1em;
     text-transform: uppercase;
+    font-family: var(--font-body);
+    font-size: 30px;
 }
 
 /* OVERLAPPING CARDS */
@@ -439,9 +543,12 @@ section {
 
 /* WORKS SECTION */
 .works-heading {
-    color: rgb(138, 138, 248);
-    margin-bottom: em;
+    color: rgb(0, 0, 0);
+    margin-bottom: 1em;
+    padding-left: 1em;
     text-transform: uppercase;
+    font-family: var(--font-body);
+    font-size: 30px;
 }
 
 
@@ -631,15 +738,15 @@ section {
 
 /* HERO SECTION CASE STUDIES */
 .project-hero {
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
     padding-top: 1em;
     padding-bottom: 1em;
     margin-bottom: 1em;
     text-align: center;
     display: grid;
     place-items: center;
-    border: 1.5px solid red;
+    /* border: 1.5px solid red; */
 }
 
 .project-hero .image-wrapper {
@@ -767,7 +874,7 @@ li {
 @media (min-width:768px) {
     .project-meta-list {
         margin: 0;
-        padding: 2em;
+        padding: 1em;
         text-wrap: pretty;
         /* padding-right: 2em; */
         /* border: 3px solid red; */
@@ -779,18 +886,19 @@ li {
 }
 .caps {
     text-transform: uppercase;
-    font-family: var(--font-headings);
-
+    font-family: var(--font-body);
 }
+
 .p-top {
-    padding-top: .5em;
+    /* padding-top: 1em; */
+    text-wrap: pretty;
 }
 
 .container.wide {
     max-width: 1600px;
 }
 .container-content {
-    padding: 0 2%;
+    padding: 1em;
     margin-bottom: 0;
 }
 
@@ -800,7 +908,7 @@ li {
 
 .container-content h5 {
     text-transform: uppercase;
-    font-family: var(--font-headings);
+    font-family: var(--font-body);
 }
 
 /* .challenge {
@@ -827,8 +935,25 @@ html {
 
 
 /* ARAW STYLING */
-.araw-section-header {
+/* .heading1 {
     padding-top: 0;
-    padding-left: 2em;
+    padding-left: 1em;
+    border: 1.5px solid red; 
+    font-size: 40px;
+} */
+
+.process {
+    /* padding-bottom: 0; */
+}
+
+.logo-description {
+    font-size: 2em;
+    text-align: left;
+    /* justify-content: center; */
+}
+
+.process p {
+    text-wrap: pretty;
+    font-size: 20px;
     border: 1.5px solid red; 
 }
