@@ -812,6 +812,7 @@ h2 {
     .two-thirds {grid-column: auto / span 8;}
     .one-fourth {grid-column: auto / span 3;}
     .three-fourths {grid-column: auto / span 9;}
+    .one-sixth {width: 1.667%}
 
     /*  12 GRID COLUMN CLASSES */
     .col-1 {grid-column: auto / span 1;}
@@ -956,4 +957,8 @@ html {
     text-wrap: pretty;
     font-size: 20px;
     border: 1.5px solid red; 
+}
+
+.assets {
+    border: 3px red;
 }
