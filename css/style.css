@@ -1014,23 +1014,30 @@ html {
 }
 
 .assets {
-    /* border: 3px red; */
-    columns: 6;
-    scale: 1.2;
-    margin-top: 5em;
-    margin-bottom: 5em;
-    width:1200px;
-    /* margin: 0 auto; */
+    columns: 3;
+    max-width: 1200px;
+    margin: 3em auto;
 }
 
 .assets img {
-    max-width: 100%;
+    width: 100px;
     height: auto;
-    scale: 5;
     margin: 0 auto;
+    display: flex;
     background-color: #DCDDC5;
+    margin-bottom: 4em;
 }
-
+@media (min-width: 768px) {
+.assets {
+    columns: 6;
+}
+.assets img {
+    width: 100px;
+    height: auto;
+    scale: 1;
+    background-color: #DCDDC5;
+    margin-bottom: 0em;
+}}
 .center {
     text-align: center;
 }
