@@ -576,7 +576,7 @@ h2 {
     position: relative;
     text-align: center;
     padding-top: 100%; 
-    border-radius: 8px;
+    border-radius: 5px;
     overflow: hidden;
 }
 
@@ -822,14 +822,28 @@ h2 {
     width: 100%;
     height: 100%;
     overflow: hidden;
+
 }
 
 .image-wrapper-fullwidth-cover img {
     max-width: none;
-    height: auto;
+    height: 100%;
     width: 100%;
     object-fit: cover;
+    border: 3px solid red;
 }
+
+@media (min-width: 768px) {
+    .image-wrapper-fullwidth-cover img {
+        max-width: none;
+        height: 800px;
+        width: 1450px;
+        object-fit: cover;
+        object-position: 100% 60%;
+        border: 3px solid green;
+    }
+}
+
 
 .project-hero-content h1 {
     font-size: 5em;
@@ -906,6 +920,12 @@ h2 {
 }
 
 /* INTRO SECTION STYLING */
+
+@media (min-width:768px) {
+    .intro {
+        padding: 0 4%;
+    }
+}
 /* .intro p {
     max-width: 35em;
 } */
