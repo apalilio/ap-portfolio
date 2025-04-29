@@ -73,8 +73,8 @@ CSS TABLE OF CONTENTS
 
 
     /* DEFINE ALL FONTS USED HERE */
-    --font-body: sofia, sans-serif;
-    --font-headings: minion, serif;
+    --font-body: "sofia-pro", san-setif;
+    --font-headings: "minion-pro", serif;
 
     /* SIZING UNITS */
     --container-width: 1200px;
@@ -258,10 +258,11 @@ header a {
     text-decoration: none; 
 }  
 
-header a:hover {
+/* header a:hover {
     color: rgb(0, 85, 255);
     cursor: pointer;
-}
+} */
+
 
 /* STYLING FOR THE NAV  */
 
@@ -279,14 +280,33 @@ header a:hover {
     list-style: none;
 }
 
-nav.site-nav li a {
-    color: black;
-}
-
 .site-nav a {
     display: block;
     padding: 1em;
+    color: black;
+    /* border: 1px solid red; */
 }
+
+.site-nav a::before,
+a.icon-hover::before {
+    content: ""; 
+    background-image: url(../img/png/portfolio-logo.png);
+    width: 20px;
+    height: 1em;
+    background-size: contain;
+    display: inline-block;
+    background-position: center;
+    /* border: 1px solid red; */
+    /* translate: 0 0.5em; */
+    padding: 0;
+    margin: 0 0 -0.1em 0;
+    opacity: 0;
+}
+.site-nav a:hover::before,
+a.icon-hover:hover::before {
+    opacity: 1;
+}
+
 
 /* MAIN */
 
@@ -298,6 +318,7 @@ main {
 
 .about h3 {
     font-size: 1.2em;
+    font-family: var(--font-headings);
 }
 
 .about ul {
@@ -351,6 +372,18 @@ main {
 /* main {
 } */
 
+/* VIEW MORE PROJETCS */
+
+.view-other-projects {
+    padding-left: 1.5em;
+}
+
+a.icon-hover {
+    text-decoration: none;
+    padding-left: 1.5em;
+}
+
+
 /* FOOTER */
 
 .site-footer {
@@ -359,6 +392,8 @@ main {
     font-family: var(--font-headings);
     /* border-top: 1px solid rgba(24, 15, 15, 0.05); */
     padding: 5em var(--unit-medium) 1em var(--unit-medium);
+
+
 }
 
 .site-footer a {
@@ -418,13 +453,23 @@ main {
     text-align: right;
 }
 
-a:-webkit-any-link {
+/* a:-webkit-any-link {
     color: -webkit-link;
     cursor: pointer;
     text-decoration: none;
     color: var(--color-sitefooter-links);
-}
+} */
 
+ul.footer-worknav li a,
+ul.footer-pagenav li a,
+ul.footer-socialnav li a {
+    text-decoration: none;
+}
+ul.footer-worknav li a:hover,
+ul.footer-pagenav li a:hover,
+ul.footer-socialnav li a:hover{
+    text-decoration: underline;
+}
 .legal {
     margin-top: 4em;
     border-top: 1px solid white;
@@ -883,8 +928,8 @@ h2 {
 @media (min-width: 768px) {
     .image-wrapper-fullwidth-cover img {
         max-width: none;
-        height: 800px;
-        width: 1450px;
+        height: 1000px;
+        width: 1600px;
         object-fit: cover;
         object-position: 100% 60%;
         border: 3px solid green;
@@ -980,30 +1025,24 @@ h2 {
 .project-meta-list {
     margin: 0;
     padding: 1em;
-    padding-top: 2.5em;
+    padding-top: 3.8em;
 }
 
 .project-meta-list li {
     list-style: none;
     font-size: 1em;
-    margin-bottom: .5em;
+    margin-bottom: 1.8em;
+    line-height: 1.8;
 }
 
 
-@media (min-width:768px) {
-    .project-meta-list {
-        text-wrap: pretty;
-        /* padding-right: 2em; */
-        /* border: 3px solid red; */
-    }
-    .container-content {
-        padding: 0 4%;
-    }
 
-}
 .caps {
     text-transform: uppercase;
-    font-family: var(--font-body);
+    font-family: var(--font-headings);
+    font-size: .8em;
+    display: block;
+    opacity: .5;
 }
 
 .p-top {
@@ -1028,19 +1067,17 @@ h2 {
     font-family: var(--font-body);
 }
 
-/* .challenge {
-    max-width: 1920px;
-    display: grid;
-    margin: 0 auto;
-} */
+@media (min-width:768px) {
+    .project-meta-list {
+        text-wrap: pretty;
+        /* padding-right: 2em; */
+        /* border: 3px solid red; */
+    }
+    .container-content {
+        padding: 0 4%;
+    }
 
-
-/* .challenge li {
-    list-style: none;
-    padding-right: 3em;
-    line-height: 1.75;
-    border: 2px red;
-} */
+}
 
 /* ---------ANIMATION----------- */
 
@@ -1062,9 +1099,6 @@ html {
 .araw-process {
     display: flex;
 }
-.process {
-    /* padding-bottom: 0; */
-}
 
 .logo-description {
     font-size: 2em;
@@ -1072,10 +1106,10 @@ html {
     /* justify-content: center; */
 }
 
-.process p {
+.container-content p {
     text-wrap: pretty;
-    font-size: 20px;
-    /* border: 1.5px solid red;  */
+    font-size: 18px;
+    font-family: var(--font-body);
 }
 
 .assets {
