@@ -55,6 +55,10 @@ CSS TABLE OF CONTENTS
     --color-links-light: rgb(204 204 204);
     --color-links-lighter: rgb(255 255 255);
 
+    --color-hover-effect-dark: #560005;
+    --color-hover-effect-light: #b20e34;
+    
+
     --color-siteheader-background: transparent;
     --color-siteheader-links: var(--color-text-headings);
 
@@ -88,7 +92,7 @@ CSS TABLE OF CONTENTS
 body {
     margin: 0;
 }
-* {
+*, *:after, *:before{
     box-sizing: border-box;
 }
 
@@ -132,6 +136,10 @@ a {
     &:hover {
         /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
         color: var(--color-links-hover);
+        outline: none;
+    }
+    &:focus {
+        outline: none;
     }
 }
 
@@ -385,26 +393,71 @@ main {
 
 /* VIEW MORE PROJETCS */
 
-.view-other-projects {
+._line {
     /* padding-left: 1.5em; */
-    text-align: center;
+    /* text-align: center; */
+    padding-top: 2em;
+    justify-content: space-between;
+    display: flex;
+    width:1400px;
+    margin: 0 auto;
+    font-size: 1.3em;
+    /* background-color: rgb(96, 37, 37); */
 }
 
-a.previous-project {
-    /* padding-left: 1.5em; */
-    text-align: left;
-    border: 3px solid red;
-}
 
-
-a.icon-hover {
+a {
     text-decoration: none;
     /* padding-left: 1.5em; */
 }
 
-.next-project {
-    text-align: center;
+._line a {
+	color: var(--color-text-body);
+	font-family: var(--font-body);
+	padding: 15px 25px;
+	position: relative;
+	display: block;
+	text-decoration: none;
 }
+
+ul._line.hover-effect li {
+    list-style: none;
+}
+
+.hover-effect a:after {
+	left: 50%;
+	background: var(--color-hover-effect-dark);
+	background: linear-gradient(to right, var(--color-hover-effect-dark) 0%, var(--color-hover-effect-light) 100%);
+	/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0,0,0,0)', endColorstr='rgba(255,255,255,0.2)', GradientType=1); */
+}
+
+.hover-effect a:before {
+	right: 50%;
+	background: var(--color-hover-effect-light);
+	background: linear-gradient(to right, var(--color-hover-effect-light) 0%, var(--color-hover-effect-dark) 100%);
+	/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(255,255,255,0.2)', endColorstr='rgba(0,0,0,0)', GradientType=1); */
+}
+
+.hover-effect a:after, .hover-effect a:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 3px;
+	bottom: 0;
+	transition: all 0.4s ease-in 0s;
+}
+
+.hover-effect a:hover:after {
+	width: 50%;
+	left: 0;
+}
+
+.hover-effect a:hover:before {
+	right: 0;
+	width: 50%;
+}
+
 
 
 /* FOOTER */
