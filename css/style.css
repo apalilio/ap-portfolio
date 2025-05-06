@@ -399,7 +399,7 @@ main {
     padding-top: 2em;
     justify-content: space-between;
     display: flex;
-    width:1400px;
+    /* width: 1400px; */
     margin: 0 auto;
     font-size: 1.3em;
     /* background-color: rgb(96, 37, 37); */
