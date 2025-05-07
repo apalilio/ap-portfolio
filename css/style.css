@@ -160,7 +160,7 @@ h3 {
 
     /* SET THE FONT AND MARGIN FOR ALL HEADINGS */
     font-family: var(--font-headings);
-    margin: .2em 0;
+    margin: .3em 0;
 }
 
 h1 {
@@ -322,7 +322,7 @@ a.icon-hover:hover::before {
 .site-logo h1 {
     font-size: 30px;
     font-family: var(--font-body);
-    border: 3px solid red;
+    /* border: 3px solid red; */
     /* text-indent: -9999px; */
 }
 
@@ -384,12 +384,6 @@ main {
     display: block;
     font-size: .8em;
 }
-
-
-/* MAIN */
-/* main {
-} */
-
 
 /* VIEW MORE PROJETCS */
 
@@ -504,7 +498,7 @@ ul._line.hover-effect li {
 
 main {
     margin-bottom: 34em;
-    background-color: white;
+    /* background-color: white; */
 }
 
 /* FOOTER */
@@ -1146,9 +1140,9 @@ h2 {
 .caps {
     text-transform: uppercase;
     font-family: var(--font-headings);
-    font-size: .8em;
+    font-size: .7em;
     display: block;
-    opacity: .5;
+    opacity: .6;
 }
 
 .p-top {
