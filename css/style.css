@@ -160,7 +160,7 @@ h3 {
 
     /* SET THE FONT AND MARGIN FOR ALL HEADINGS */
     font-family: var(--font-headings);
-    margin: .4em 0;
+    margin: .2em 0;
 }
 
 h1 {
@@ -393,6 +393,10 @@ main {
 
 /* VIEW MORE PROJETCS */
 
+.view-other-projects {
+    padding-left: 20px; 
+    padding-right: 20px;
+}
 ._line {
     /* padding-left: 1.5em; */
     /* text-align: center; */
@@ -458,6 +462,46 @@ ul._line.hover-effect li {
 	width: 50%;
 }
 
+/* PREV and NEXT Arrows */
+.prev {
+    position: relative;
+}
+
+.prev::before {
+    content: "<"; 
+    /* content: "";  */
+    /* CREATE AN SVG OR USE  BG IMG
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../img/myprevarrow.svg');
+    */
+    width: 25px;
+    /* height: 100%; */
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    font-weight: 100;
+    /* font-size: 2em; */
+    opacity: .2;
+    left: 0;
+}
+
+.next {
+    position: relative;
+}
+
+.next::after {
+    content:">";
+    position: absolute;
+    translate: 0 -50%;
+    top: 50%;
+    font-weight: 100;
+    opacity: .2;
+    right: 0;
+
+}
+
 main {
     margin-bottom: 34em;
     background-color: white;
@@ -501,7 +545,16 @@ main {
     bottom: 1em;
     right: .2em;
     scale: 2.5;
+
 }
+@media (max-width: 767px) {
+    .footer-logo-img {
+        z-index: -1;
+
+    }
+}
+
+
 .site-footer a {
     color: var(--color-sitefooter-links);
 }
@@ -791,7 +844,7 @@ h2 {
     gap: 20px;
     margin: 20px;
     grid-template-columns: 1fr;
-    border: 1.5px solid red;
+    /* border: 1.5px solid red; */
 
 }
 
@@ -817,7 +870,7 @@ h2 {
 .works-image {
     width: 100%;
     height: 100%;
-    /* max-height: 97vh; */
+    max-height: 95vh;
     object-fit: cover;
     border-radius: 10px;
     object-position: center;
@@ -959,6 +1012,7 @@ h2 {
     left: 0; */
     width: 100%;
     height: 100%;
+    max-height: 95vh;
     object-fit: cover;
     object-position: center;
 }
@@ -1066,13 +1120,10 @@ h2 {
 
 /* INTRO SECTION STYLING */
 
-@media (min-width:768px) {
+/* @media (min-width:768px) {
     .intro {
         padding: 0 4%;
     }
-}
-/* .intro p {
-    max-width: 35em;
 } */
 
 .project-meta-list {
@@ -1112,6 +1163,8 @@ h2 {
 
 .container-content p {
     font-size: 18px;
+    font-family: var(--font-body);
+    text-wrap: pretty;
 }
 
 /* .container-content h3 {
@@ -1143,20 +1196,3 @@ html {
 }
 
 
-/* ARAW STYLING */
-.container-content p {
-    text-wrap: pretty;
-    font-size: 18px;
-    font-family: var(--font-body);
-}
-
-.araw-padding img {
-    margin: 2em;
-    scale: .7;
-}
-
-/* EAMES STYLING */
-.img-spacer img {
-    margin: 5em 0;
-    /* border: 3px solid red; */
-}
