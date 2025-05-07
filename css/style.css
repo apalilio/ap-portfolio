@@ -44,7 +44,7 @@ CSS TABLE OF CONTENTS
 
     --color-body-background: rgb(255, 255, 255);
     --color-text-body: rgb(0, 0, 0);
-    --color-text-headings-h1: rgb(108, 120, 144);
+    --color-text-headings-h1: rgb(0, 0, 0);
     --color-text-headings-h2: rgb(0, 0, 0);
     --color-text-headings-h4: rgb(0, 0, 0);
 
@@ -575,11 +575,12 @@ main {
 }
 
 .footer-worknav,
-.worknav li{
+.worknav li {
     list-style: none;
     text-decoration: none;
     font-family: var(--font-body);
     color: var(--color-sitefooter-links);
+    line-height: 1.8;
 }
 
 .footer-pagenav,
@@ -592,12 +593,13 @@ main {
     width: fit-content;
     margin-left:auto;
     margin-right: auto;
+    
 }
 
 .footer-pagenav li { 
     list-style: none;
     font-family: var(--font-body);
-
+    line-height: 1.8;
 }
 
 .footer-socialnav,
@@ -611,6 +613,7 @@ main {
     font-family: var(--font-body);
     text-decoration: none;
     text-align: right;
+    line-height: 1.8;
 }
 
 /* a:-webkit-any-link {
@@ -1156,9 +1159,14 @@ h2 {
 .container.wide {
     max-width: 1600px;
 }
+
 .container-content {
     padding: 1em;
     margin-bottom: 0;
+}
+.container-content h1 {
+    font-family: var(--font-headings);
+    font-size: 2em;
 }
 
 .container-content p {
