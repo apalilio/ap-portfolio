@@ -49,7 +49,7 @@ CSS TABLE OF CONTENTS
     --color-text-headings-h4: rgb(0, 0, 0);
 
     --color-links: rgb(0, 0, 0);
-    --color-links-hover: darkblue;
+    --color-links-hover: rgb(255, 255, 255);
     --color-links-dark: rgb(102 102 102);
     --color-links-darker: rgb(0 0 0);
     --color-links-light: rgb(204 204 204);
@@ -366,14 +366,19 @@ main {
 
 
 .a-button {
-
-    border: 2px solid #b20e34;
+    background-color: var( --color-hover-effect-light);
+    /* border: 2px solid #b20e34; */
     border-radius: 4px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     display: inline-block;
     padding: 0.25em 1em;
     margin: var(--unit-small) 0;
     text-decoration: none;
+}
+
+.a-button:hover {
+    color: var(--color-links-hover);
+    background-color: var( --color-hover-effect-dark);
 }
 
 .a-button a:-webkit-any-link {
@@ -462,22 +467,20 @@ ul._line.hover-effect li {
 }
 
 .prev::before {
-    content: "<"; 
-    /* content: "";  */
-    /* CREATE AN SVG OR USE  BG IMG
+    /* content: "<";  */
+    content: ""; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url('../img/myprevarrow.svg');
-    */
+    background-image: url('../img/svg/prev-next-arrow-48.svg');
     width: 25px;
-    /* height: 100%; */
+    height: 35%;
     position: absolute;
     top: 50%;
     translate: 0 -50%;
     font-weight: 100;
     /* font-size: 2em; */
-    opacity: .2;
+    opacity: .4;
     left: 0;
 }
 
@@ -486,19 +489,26 @@ ul._line.hover-effect li {
 }
 
 .next::after {
-    content:">";
+    content: ""; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../img/svg/prev-next-arrow-47.svg');
+    width: 25px;
+    height: 35%;
     position: absolute;
-    translate: 0 -50%;
     top: 50%;
+    translate: 0 -50% ;
     font-weight: 100;
-    opacity: .2;
-    right: 0;
+    /* font-size: 2em; */
+    opacity: .4;
+    left: 0;
 
 }
 
 main {
     margin-bottom: 34em;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 /* FOOTER */
@@ -519,7 +529,7 @@ main {
 
     main {
         margin-bottom: 25em;
-        background-color: white;
+        background-color: rgb(255, 255, 255);
     }
     .site-footer {
         background-color: var(--color-sitefooter-background);
@@ -554,9 +564,9 @@ main {
 }
 
 .site-footer .eyebrow {
-    font-family: var(--font-body);
-    font-size: 30px;
-    text-transform: lowercase;
+    /* font-family: var(--font-body); */
+    /* font-size: 30px; */
+    /* text-transform: lowercase; */
     padding-bottom: 1em;
     text-align: right;
 }
@@ -1136,6 +1146,10 @@ h2 {
     line-height: 1.8;
 }
 
+.pele-icon {
+    padding-bottom: 5px;
+
+}
 
 .caps {
     text-transform: uppercase;
@@ -1161,6 +1175,7 @@ h2 {
 .container-content h1 {
     font-family: var(--font-headings);
     font-size: 2em;
+    /* border: 3px solid red; */
 }
 
 .container-content p {
