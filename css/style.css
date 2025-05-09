@@ -896,8 +896,8 @@ h2 {
 /* Main project grid container */
 .project-grid {
     display: grid;
-    gap: 40px;
-    margin: 40px;
+    gap: 30px;
+    margin: 30px;
     grid-template-columns: 1fr; /* Mobile: 1 column */
 }
 
