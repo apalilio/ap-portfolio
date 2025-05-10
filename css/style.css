@@ -207,11 +207,15 @@ p {
 
 /* GLOBAL MEDIA */
 
-img {
+img, video {
 
     /* MAKE ALL IMAGES SHRINK ON SMALL SCREENS */
     max-width: 100%;
     height: auto;
+    /* display: block; */
+}
+video {
+    display: block;
 }
 
 /* GLOBAL HELPERS */
@@ -899,13 +903,15 @@ h2 {
     opacity: 0;
     transition: opacity 0.4s ease;
     display: flex;
+    justify-items: center;
+    justify-content: space-between;
 }
 
 .project-title h3 {
     font-family: var(--font-body);
     text-align: left;
     font-size: 1.2em;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .project-title p {
@@ -914,6 +920,11 @@ h2 {
     justify-content: space-between;
 }
 
+h3.project-type {
+    font-style: italic;
+    font-size: 1em;
+    padding-top: .36em;
+}
   /* Show the text on hover */
 .works-card:hover .project-title {
     opacity: 1;
