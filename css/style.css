@@ -889,6 +889,37 @@ h2 {
     object-position: center;
 }
 
+.project-title {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+}
+
+.project-title h3 {
+    font-family: var(--font-body);
+    text-align: left;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.project-title p {
+    font-family: var(--font-body);
+    text-align: right;
+    justify-content: space-between;
+}
+
+  /* Show the text on hover */
+.works-card:hover .project-title {
+    opacity: 1;
+}
+
+
 /* CASE STUDY LAYOUT */
 
   /* Set up the grid container */
