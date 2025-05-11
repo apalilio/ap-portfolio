@@ -911,20 +911,22 @@ h2 {
     font-family: var(--font-body);
     text-align: left;
     font-size: 1.2em;
-    /* text-transform: uppercase; */
+    text-transform: uppercase;
 }
 
-.project-title p {
+/* .project-title p {
     font-family: var(--font-body);
     text-align: right;
     justify-content: space-between;
-}
+} */
 
 h3.project-type {
+    font-size: 1.2em;
+    /* padding-top: .34em; */
     font-style: italic;
-    font-size: 1em;
-    padding-top: .36em;
+    text-transform: none;
 }
+
   /* Show the text on hover */
 .works-card:hover .project-title {
     opacity: 1;
