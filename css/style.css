@@ -1304,8 +1304,12 @@ h3.project-type {
 
 .pele-icon {
     padding-bottom: 5px;
-
+    opacity: .3;
 }
+.project-meta-list li .pele {
+    color: red;
+}
+
 
 .caps {
     text-transform: uppercase;
