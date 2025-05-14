@@ -563,7 +563,7 @@ main {
     scale: 2.5;
 
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .footer-logo-img {
         z-index: -1;
 
@@ -1123,7 +1123,7 @@ h2 {
 
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
     .works-grid.two-column {
         grid-template-columns: 1fr 1fr;
 
@@ -1202,7 +1202,7 @@ h3.project-type {
     grid-template-columns: 1fr; /* Mobile: 1 column */
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
     .project-grid.two-column {
         grid-template-columns: 1fr 1fr;
 
