@@ -552,7 +552,7 @@ main {
         position: fixed;
         width: 100%;
         /* z-index: -1; */
-        /* overflow: hidden; */
+        overflow: hidden;
     }
 }
 
@@ -563,7 +563,7 @@ main {
     scale: 2.5;
 
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .footer-logo-img {
         z-index: -1;
 
@@ -739,7 +739,7 @@ section {
 }
 
 
-/* .shine {
+.shine {
   text-transform: uppercase;
 font-size: 1em;
   letter-spacing: 4px;
@@ -759,7 +759,7 @@ animation: animate 6s linear infinite;
 100% {
     background-position: 500%;
   }
-} */
+}
 
 .flower-hero img {
     opacity: 0;
