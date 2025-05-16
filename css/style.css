@@ -739,15 +739,15 @@ section {
 }
 
 
-.shine {
-  text-transform: uppercase;
+/* .shine {
+text-transform: uppercase;
 font-size: 1em;
-  letter-spacing: 4px;
-  overflow: hidden;
+letter-spacing: 4px;
+overflow: hidden;
 background: linear-gradient(90deg, #b20e34, #fff, #b20e34);
 background-repeat: no-repeat;
 background-size: 80%;
-animation: animate 6s linear infinite;
+animation: animate 9s linear infinite;
 -webkit-background-clip: text;
 -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
@@ -759,7 +759,7 @@ animation: animate 6s linear infinite;
 100% {
     background-position: 500%;
   }
-}
+} */
 
 .flower-hero img {
     opacity: 0;
@@ -911,10 +911,10 @@ animation: animate 6s linear infinite;
 .flower-hero6 {
     animation: animflower6 7s linear infinite;
     left: auto;
-    top: 8%;
+    top: 2%;
     right: 30%;
     /* bottom: 20%; */
-    width: 20%;
+    width: 10%;
     position: absolute;
     /* border: 3px solid red; */
 }
